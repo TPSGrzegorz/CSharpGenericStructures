@@ -10,6 +10,7 @@ namespace CSharpGenericStructures
     {
         static void Main(string[] args)
         {
+            Console.ReadLine();
         }
     }
 }
