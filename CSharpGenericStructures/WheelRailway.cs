@@ -1,8 +1,8 @@
 ﻿namespace Railway
 {
-    public class WheelRailway
+    public class WheelRailway<T>
     {
-        private double[] buffer;
+        private T[] buffer;
         private int startIndex;
         private int endIndex;
 
@@ -13,13 +13,13 @@
 
         public WheelRailway(int capacity)
         {
-            buffer = new double[capacity + 1];
+            buffer = new T[capacity + 1];
 
             startIndex = 0;
             endIndex = 0;
         }
 
-        public void Write(double value)
+        public void Write(T value)
         {
             buffer[endIndex] = value;
             endIndex = (endIndex + 1) % buffer.Length;
@@ -30,7 +30,7 @@
             }
         }
 
-        public double Read()
+        public T Read()
         {
             var result = buffer[startIndex];
             startIndex = (startIndex + 1) % buffer.Length;

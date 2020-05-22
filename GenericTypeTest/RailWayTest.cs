@@ -10,14 +10,14 @@ namespace GenericTypeTest
         [TestMethod]
         public void NewRailWayIsEmpty()
         {
-            var railWay = new WheelRailway();
+            var railWay = new WheelRailway<double>();
 
             Assert.IsTrue(railWay.IsEmpty);
         }
         [TestMethod]
         public void IsThreeElementsRailwayFull()
         {
-            var railWay = new WheelRailway(capacity: 3);
+            var railWay = new WheelRailway<double>(capacity: 3);
 
             railWay.Write(3.6);
             railWay.Write(2.4);
@@ -30,10 +30,10 @@ namespace GenericTypeTest
         [TestMethod]
         public void FirstInFirstOut()
         {
-            var railWay = new WheelRailway(capacity: 3);
+            var railWay = new WheelRailway<string>(capacity: 3);
 
-            var value1 = 3.6;
-            var value2 = 2.4;
+            var value1 = "3.6";
+            var value2 = "2.4";
 
             railWay.Write(value1);
             railWay.Write(value2);
@@ -43,9 +43,10 @@ namespace GenericTypeTest
 
             Assert.IsTrue(railWay.IsEmpty);
         }
+        [TestMethod]
         public void OverrideIfFull()
         {
-            var railWay = new WheelRailway(capacity: 3);
+            var railWay = new WheelRailway<double>(capacity: 3);
 
             var value1 = new[] { 1.2, 2.4, 3.6, 4.8, 5.3, 6.8 };
 
@@ -63,5 +64,23 @@ namespace GenericTypeTest
 
             Assert.IsTrue(railWay.IsEmpty);
         }
+        [TestMethod]
+        public void CapacityTest()
+        {
+            var railWay = new WheelRailway<int>(capacity: 3);
+
+            var value1 = 1;
+            var value2 = 2;
+
+            railWay.Write(value1);
+
+            Assert.AreEqual(4, railWay.Capacity);
+            railWay.Write(value2);
+
+            Assert.AreEqual(4, railWay.Capacity);
+
+            Assert.IsTrue(!railWay.IsEmpty);
+        }
+
     }
 }
