@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CSharpGenericStructures
+namespace Railway
 {
     class Program
     {

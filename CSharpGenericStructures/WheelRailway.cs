@@ -1,4 +1,4 @@
-﻿namespace CSharpGenericStructures
+﻿namespace Railway
 {
     public class WheelRailway
     {
