@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericTypeTest", "..\Gener
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_GenericColectionTest", "..\2_GenericColectionTest\2_GenericColectionTest.csproj", "{3D288DE6-77F5-4921-8C8F-7F842F9F2DC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueTest", "..\QueueTest\QueueTest.csproj", "{B12C2D3F-9EEB-48C2-8676-569A17F11DD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3D288DE6-77F5-4921-8C8F-7F842F9F2DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D288DE6-77F5-4921-8C8F-7F842F9F2DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D288DE6-77F5-4921-8C8F-7F842F9F2DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B12C2D3F-9EEB-48C2-8676-569A17F11DD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B12C2D3F-9EEB-48C2-8676-569A17F11DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B12C2D3F-9EEB-48C2-8676-569A17F11DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B12C2D3F-9EEB-48C2-8676-569A17F11DD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

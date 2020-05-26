@@ -45,7 +45,7 @@ namespace GenericColetions
 
             //}
             //Console.ReadLine();
-
+            Console.WriteLine("!!!!!!!!!Queue!!!!!!!!!!!");
             Queue<Worker> queue = new Queue<Worker>();
             queue.Enqueue(new Worker { Name = "Grzegorz", Sunrame = "Bogusz" });
             queue.Enqueue(new Worker { Name = "Anna", Sunrame = "Rurarz" });
@@ -57,6 +57,20 @@ namespace GenericColetions
                 var worker = queue.Dequeue();
                 Console.WriteLine(worker.Name + " " + worker.Sunrame);
             }
+            Console.WriteLine("!!!!!!!!!!STOS!!!!!!!!!");
+            Stack<Worker> stack = new Stack<Worker>();
+            stack.Push(new Worker { Name = "Grzegorz", Sunrame = "Bogusz" });
+            stack.Push(new Worker { Name = "Anna", Sunrame = "Rurarz" });
+            stack.Push(new Worker { Name = "Marek", Sunrame = "Cros" });
+            stack.Push(new Worker { Name = "Ola", Sunrame = "War" });
+
+            while (stack.Count > 0)
+            {
+                var temp = stack.Peek();
+                var worker = stack.Pop();
+                Console.WriteLine(worker.Name + " " + worker.Sunrame);
+            }
+
         }
     }
 }
