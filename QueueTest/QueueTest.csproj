@@ -52,6 +52,7 @@
     <Compile Include="QueueTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stack.cs" />
+    <Compile Include="HashSetTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
