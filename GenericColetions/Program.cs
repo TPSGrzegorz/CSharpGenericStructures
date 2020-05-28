@@ -16,7 +16,50 @@ namespace GenericColetions
             //MyQueue();
             //MyStack();
 
-            MyHashSet();
+            //MyHashSet();
+
+            //MyLinkedList();
+            LinkedList<int> list = new LinkedList<int>();
+
+            list.AddFirst(5);
+            list.AddFirst(6);
+            list.AddFirst(7);
+
+            var firstElement = list.First;
+            var lastElement = list.Last;
+            
+            list.AddAfter(firstElement, 100);
+            list.AddBefore(firstElement, 20);
+            foreach (var i in list)
+            {
+                Console.WriteLine(i);
+            }
+
+            var node = list.First;
+
+            while (node != null)
+            {
+                Console.WriteLine(node.Value);
+                node = node.Next;
+            }
+        }
+
+        private static void MyLinkedList()
+        {
+            LinkedList<int> list = new LinkedList<int>();
+
+            list.AddFirst(5);
+            list.AddFirst(6);
+            list.AddFirst(7);
+
+            list.AddLast(1);
+            list.AddLast(2);
+
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         private static void MyHashSet()
