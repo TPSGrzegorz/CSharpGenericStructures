@@ -19,6 +19,23 @@ namespace GenericColetions
             //MyHashSet();
 
             //MyLinkedList();
+            //MyLinkedList2();
+
+            var workers = new Dictionary<string, Worker>();
+            workers.Add("Nowak", new Worker { Sunrame = "Nowak" });
+            workers.Add("Kowal", new Worker { Sunrame = "Kowal" });
+            workers.Add("Kaczor", new Worker { Sunrame = "Kaczor" });
+
+            var kowal = workers["Kowal"];
+
+            foreach (var worker in workers)
+            {
+                Console.WriteLine("{0}:{1}", worker.Key, worker.Value.Sunrame);
+            }
+        }
+
+        private static void MyLinkedList2()
+        {
             LinkedList<int> list = new LinkedList<int>();
 
             list.AddFirst(5);
@@ -27,7 +44,7 @@ namespace GenericColetions
 
             var firstElement = list.First;
             var lastElement = list.Last;
-            
+
             list.AddAfter(firstElement, 100);
             list.AddBefore(firstElement, 20);
             foreach (var i in list)
