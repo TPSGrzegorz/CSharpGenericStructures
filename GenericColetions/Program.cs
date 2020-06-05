@@ -21,17 +21,30 @@ namespace GenericColetions
             //MyLinkedList();
             //MyLinkedList2();
 
-            var workers = new Dictionary<string, Worker>();
-            workers.Add("Nowak", new Worker { Sunrame = "Nowak" });
-            workers.Add("Kowal", new Worker { Sunrame = "Kowal" });
-            workers.Add("Kaczor", new Worker { Sunrame = "Kaczor" });
+            var workers = new Dictionary<string, List<Worker>>();
+            workers.Add("Bookkeeping", new List<Worker>() { new Worker { Sunrame = "Nowak" },
+                                                            new Worker { Sunrame = "Kowal" },
+                                                            new Worker { Sunrame = "Kaczor"} }); ;
 
-            var kowal = workers["Kowal"];
+            workers["Bookkeeping"].Add( new Worker { Sunrame = "Nowak" });
 
-            foreach (var worker in workers)
+            workers.Add("IT", new List<Worker>() { new Worker { Sunrame = "Kowalski" },
+                                                   new Worker { Sunrame = "Stepczyk" },
+                                                   new Worker { Sunrame = "Bogusz"} }); ;
+
+            foreach (var item in workers)
             {
-                Console.WriteLine("{0}:{1}", worker.Key, worker.Value.Sunrame);
+                foreach (var worker in item.Value)
+                {
+                    Console.WriteLine(item.Key + " : " +worker.Sunrame);
+                }
             }
+            Console.WriteLine("Workers from Bookkeeping department");
+            foreach (var item in workers["Bookkeeping"])
+            {
+                Console.WriteLine(item.Sunrame);
+            }
+            
         }
 
         private static void MyLinkedList2()
